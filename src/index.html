@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MSM_training</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+<div class="page-container">
+    <div class="page-header page-header_indent">
+        <div class="page-header__container">
+            <div class="page-header__logo">
+                <a class="page-header__logo-link">
+                    <img class="page-header__image" src="assets/img/MSM_Small_size_logo-final.webp"
+                         alt="moneySupermarket.com">
+                </a>
+            </div>
+            <div class="page-header__text">
+
+            </div>
+        </div>
+    </div>
+    <div class="block-text block-text_navy">
+            <span class="block-text__info block-text__info_uppercased block-text__info_text-color-white">
+                <p>gas & electricity</p>
+            </span>
+    </div>
+    <div class="block-text">
+            <span class="block-text__info-block block-text__info_first-letter-uppercased block-text__info_text-color-navy">
+                <h1>Your personal details</h1>
+            </span>
+    </div>
+    <div class="block-text">
+            <span class="block-text__info-block block-text__info_first-letter-uppercased block-text__info_text-color-navy">
+                <h3>Please provide your personal details</h3>
+            </span>
+    </div>
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent text_align-orthogonal-axis">
+            <div class="text__header text__element_inner text__inner">
+                <h3 class="text__header_font-t text_reset-margin">Title</h3>
+            </div>
+        </div>
+        <div class="select input input-block_right-side-indent">
+            <select class="input__field_border_t input_inner select__field_indent_s input__field_size_xl input__text-color">
+                <option class="select__field_indent_s" selected disabled hidden>--Please select--</option>
+                <option value="a">Mr.</option>
+                <option value="b">Ms.</option>
+            </select>
+        </div>
+    </div>
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent input-block__column">
+            <div class="text__header text__element_inner text__inner">
+                <h3 class="text__header_font-t text_reset-margin">Name</h3>
+            </div>
+        </div>
+        <div class="select input input-block_right-side-indent input-block__column">
+            <div class="input">
+                <input class="input__field input__field_size_xl input__field_border_t input__field_indent_s input_inner"
+                       type="text"
+                       placeholder="First name">
+            </div>
+
+            <div class="input">
+                <input class="input__field input__field_size_xl input__field_border_t input__field_indent_s input_inner"
+                       type="text"
+                       placeholder="Surname">
+            </div>
+        </div>
+    </div>
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent input-block__column text_align-main-axis">
+            <div class="text__header text__element_inner text__inner">
+                <h3 class="text__header_font-t text_reset-margin">Employment status</h3>
+            </div>
+            <div class="text__body text__element_inner text__inner">
+                <p class="text__body_gray-style text_reset-margin">The following information is needed for the provider
+                    to complete their credit checks</p>
+            </div>
+        </div>
+        <div class="select input input-block_right-side-indent">
+            <select class="input__field_border_t input_inner select__field_indent_s input__field_size_xl input__text-color">
+                <option class="select__field_indent_s" selected disabled hidden>--Please select--</option>
+                <option value="a">Employee</option>
+                <option value="b">Worker</option>
+                <option value="c">Self-employed</option>
+            </select>
+        </div>
+    </div>
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent text_align-orthogonal-axis">
+            <div class="text__header text__element_inner text__inner ">
+                <h3 class="text__header_font-t text_reset-margin">Do you have special needs, such as visual or hearing
+                    impairment?</h3>
+            </div>
+        </div>
+        <div class="radio-input input input-block_right-side-indent input-block__row input-block_space-between">
+            <div class="input__field_size_m radio-input__border input__field_border_t input_inner">
+                <input type="radio" id='yes' name="impairment" class="input__text-color"><label
+                    class="radio-input_fill-input input__text-color" for="yes">Yes</label>
+            </div>
+            <div class="input__field_size_m radio-input__border input__field_border_t input_inner input_left-indent">
+                <input type="radio" id='no' name="impairment" class="input__text-color"><label
+                    class="radio-input_fill-input input__text-color" for="no">No</label>
+            </div>
+        </div>
+    </div>
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent input-block__column text_align-main-axis">
+            <div class="text__header text__element_inner text__inner">
+                <h3 class="text__header_font-t text_reset-margin">Email Address</h3>
+            </div>
+            <div class="text__body text__element_inner text__inner">
+                <p class="text__body_gray-style text_reset-margin">This email address will be used by the supplier to
+                    confirm and activate your application. Please make sure it's correct.</p>
+            </div>
+        </div>
+        <div class="radio-input input input-block_right-side-indent input-block__column input-block_space-between">
+            <div class="input__field_size_xl radio-input__border input__field_border_t input_inner">
+                <input type="radio" id='oldEmail' name="email" class="input__text-color"><label
+                    class="radio-input_fill-input input__text-color" for="oldEmail">your@email.com</label>
+            </div>
+            <div class="input__field_size_xl radio-input__border input__field_border_t input_inner">
+                <input type="radio" id='newEmail' name="email" class="input__text-color"><label
+                    class="radio-input_fill-input input__text-color" for="newEmail">Enter a new email address</label>
+            </div>
+        </div>
+    </div>
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent text_align-orthogonal-axis">
+            <div class="text__header text__element_inner text__inner">
+                <h3 class="text__header_font-t text_reset-margin">Telephone number</h3>
+            </div>
+        </div>
+        <div class="select input input-block_right-side-indent">
+            <div class="input">
+                <input class="input__field input__field_size_xl input__field_border_t input__field_indent_s input_inner"
+                       type="text"
+                       placeholder="e.g. 0777 1234567">
+            </div>
+        </div>
+    </div>
+
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent input-block__column text_align-main-axis">
+            <div class="text__header text__element_inner text__inner">
+                <h3 class="text__header_font-t text_reset-margin">Date of Birth</h3>
+            </div>
+            <div class="text__body text__element_inner text__inner">
+                <p class="text__body_gray-style text_reset-margin">For example: 30/10/1984</p>
+            </div>
+        </div>
+        <div class="date-picker date-picker_flex input input-block_right-side-indent">
+            <div class="date-picker_flex input__field_border_t input__field_size_xl">
+                <div class="input">
+                    <input class="input__field  input__field_size_s input_inner input__field_indent_l date-picker_border-hidden"
+                           type="text"
+                           placeholder="DD">
+                </div>
+                <div class="input-dash_indent-top">
+                    <div>/</div>
+                </div>
+                <div class="input">
+                    <input class="input__field  input__field_size_s input_inner input__field_indent_l date-picker_border-hidden"
+                           type="text"
+                           placeholder="MM">
+                </div>
+                <div class="input-dash_indent-top">
+                    <div>/</div>
+                </div>
+                <div class="input">
+                    <input class="input__field  input__field_size_s input_inner input__field_indent_l date-picker_border-hidden"
+                           type="text"
+                           placeholder="YYYY">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent text_align-orthogonal-axis">
+            <div class="text__header text__element_inner text__inner">
+                <h3 class="text__header_font-t text_reset-margin">Sort code</h3>
+            </div>
+        </div>
+        <div class="input-dash input-block_right-side-indent input__field_size_xl">
+            <div class="input ">
+                <input class="input__field input__field_size_s input__field_border_t input__field_size_xs input_inner"
+                       type="text"
+                       placeholder="">
+            </div>
+            <div class="input-dash__dash">
+                <div>-</div>
+            </div>
+            <div class="input ">
+                <input class="input__field input__field_size_s input__field_border_t input__field_size_xs input_inner"
+                       type="text"
+                       placeholder="">
+            </div>
+            <div class="dash input-dash__dash">
+                <div>-</div>
+            </div>
+            <div class="input ">
+                <input class="input__field input__field_size_s input__field_border_t input__field_size_xs input_inner"
+                       type="text"
+                       placeholder="">
+            </div>
+        </div>
+
+
+    </div>
+    <div class="input-block input-block_space-between input-block_bottom-indent">
+        <div class="text input-block_left-side-indent text_align-orthogonal-axis">
+            <div class="text__header text__element_inner text__inner">
+                <h3 class="text__header_font-t text_reset-margin">When did you move in to your billing address?</h3>
+            </div>
+        </div>
+        <div class="input-block input-block_right-side-indent input-block__row ">
+            <div class="select input input-block_left-side-indent">
+                <select class="select_box-sizing input__field_border_t input_inner select__field_indent_s input__field_size_l input__text-color">
+                    <option class="select__field_indent_s" selected disabled hidden>--Month--</option>
+                    <option value="a">January</option>
+                    <option value="b">February</option>
+                    <option value="c">March</option>
+                </select>
+            </div>
+            <div class="input ">
+                <input class="input__field input__field_size_s input__field_border_t input__field_indent_s input_inner input_left-indent"
+                       type="text"
+                       placeholder="Surname">
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
