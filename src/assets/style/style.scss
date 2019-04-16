@@ -1,0 +1,282 @@
+$color-navy: #4d617d;
+$color-gray: #767676;
+$color-gray-light: #A9A9A9;
+$color-white: #FFF;
+$input-height: 40px;
+
+
+.page-container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.page-header {
+    display: flex;
+
+    &__container {
+        flex-direction: row;
+    }
+
+    &__logo {
+        align-items: flex-start;
+        margin-left: 30px;
+    }
+
+    &__logo-link {
+        display: block;
+        height: 30px;
+        width: 75px;
+    }
+
+    &__image {
+        width: auto;
+        height: 100%;
+    }
+
+    &_indent {
+        margin-bottom: 20px;
+    }
+
+}
+
+.block-text {
+    &__info {
+        display: inline-block;
+        margin: 5px auto 5px 30px;
+
+        &_text-color {
+            &-white {
+                color: $color-white;
+            }
+
+            &-navy {
+                color: $color-navy;
+            }
+        }
+    }
+
+    &_info-block {
+        display: block;
+        margin-left: 30px;
+    }
+
+    &__info_uppercased {
+        text-transform: uppercase;
+    }
+
+    &_navy {
+        background-color: $color-navy;
+    }
+}
+
+
+.input-block {
+    display: flex;
+
+    &_left-side-indent {
+        padding-left: 23px;
+    }
+
+    &_right-side-indent {
+        padding-right: 90px;
+    }
+
+    &_row {
+        flex-direction: row;
+    }
+
+    &__column {
+        flex-direction: column;
+    }
+
+    &_space-between {
+        justify-content: space-between;
+    }
+
+    &_start-main-axis {
+        justify-content: flex-start;
+    }
+
+    &__center-orthogonal-axis {
+        align-self: center;
+    }
+
+    &_bottom-indent {
+        margin-bottom: 30px;
+    }
+}
+
+.input {
+    display: flex;
+
+    &__field {
+        display: inline-block;
+        padding: 0;
+
+        &_border_t {
+            border: 1px solid $color-gray;
+            border-radius: 3px;
+        }
+
+        &_size {
+
+            &_xl {
+                height: $input-height;
+                width: 260px;
+            }
+
+            &_l {
+                height: $input-height;
+                width: 160px;
+            }
+
+            &_m {
+                height: $input-height;
+                width: 120px;
+            }
+
+            &_s {
+                height: $input-height;
+                width: 83px;
+            }
+
+            &_xs {
+                height: $input-height;
+                width: 70px;
+            }
+        }
+
+        &-color {
+            color: $color-gray;
+        }
+
+        &_indent {
+            &_s {
+                padding: 0;
+                text-indent: 10px;
+            }
+
+            &_l {
+                padding: 0;
+                text-indent: 30px;
+            }
+        }
+    }
+
+    &_inner {
+        margin-bottom: 10px;
+    }
+
+    &_left-indent {
+        margin-left: 15px;
+    }
+}
+
+
+select {
+    display: inline-block;
+
+    &_box-sizing {
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+    }
+
+    &__field_indent_s {
+        padding: 0;
+        text-indent: 5px;
+    }
+}
+
+
+.text {
+    display: flex;
+
+    &_align {
+        &-orthogonal-axis {
+            align-items: center;
+        }
+
+        &-main-axis {
+            justify-content: center;
+        }
+
+        &-inner-center {
+            align-self: center;
+        }
+    }
+
+    &__header_font-t {
+        font-weight: normal;
+    }
+
+    &__body_gray-style {
+        color: $color-gray;
+    }
+
+    &_reset-margin {
+        margin: 0;
+    }
+
+    &__element_inner {
+        margin-bottom: 7px;
+    }
+
+    &__inner {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+.radio {
+    &-input {
+        &__border {
+            line-height: 40px;
+        }
+
+        &_fill-input {
+            display: inline-block;
+            width: 80%;
+        }
+    }
+}
+
+
+.input {
+    &-dash {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__dash {
+            margin-bottom: 10px;
+        }
+
+        &_indent-top {
+            padding-top: 11px;
+        }
+    }
+
+}
+
+.date-picker {
+    &_flex {
+        display: flex;
+    }
+
+    &_border-hidden {
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .input-block {
+        display: flex;
+        flex-direction: column;
+        &_right-side-indent {
+            padding-right: 90px;
+            padding-left: 55px;
+        }
+    }
+}
