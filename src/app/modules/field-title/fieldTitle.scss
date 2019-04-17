@@ -1,0 +1,45 @@
+$color-navy: #4d617d;
+$color-gray: #767676;
+$color-gray-light: #A9A9A9;
+$color-white: #FFF;
+$input-height: 40px;
+
+
+.text {
+  display: flex;
+
+  &_align {
+    &-orthogonal-axis {
+      align-items: center;
+    }
+
+    &-main-axis {
+      justify-content: center;
+    }
+
+    &-inner-center {
+      align-self: center;
+    }
+  }
+
+  &__header_font-t {
+    font-weight: normal;
+  }
+
+  &__body_gray-style {
+    color: $color-gray;
+  }
+
+  &_reset-margin {
+    margin: 0;
+  }
+
+  &__element_inner {
+    margin-bottom: 7px;
+  }
+
+  &__inner {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
