@@ -6,9 +6,46 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .page-container {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+    </style>
 </head>
 <body ng-app="msmApp">
-<input-title></input-title>
-<field-input></field-input>
+<div class="page-container">
+    <page-header></page-header>
+    <block-text data-navy="true">
+        <p class="block-text__info block-text__info_uppercased block-text__info_text-color-white">gas & electricity</p>
+    </block-text>
+    <block-text>
+        <h1 class="block-text__info-block block-text__info_first-letter-uppercased block-text__info_text-color-navy">Your personal details</h1>
+    </block-text>
+    <block-text>
+        <h3 class="block-text__info-block block-text__info_first-letter-uppercased block-text__info_text-color-navy">Please provide your personal details</h3>
+    </block-text>
+    <input-block >
+        <input-title data-orthogonal="true"></input-title>
+        <field-input></field-input>
+    </input-block>
+    <input-block>
+        <input-title data-column="true"></input-title>
+        <field-radio-button data-row="true"></field-radio-button>
+    </input-block>
+    <input-block>
+        <input-title></input-title>
+        <field-select></field-select>
+    </input-block>
+    <input-block>
+        <input-title></input-title>
+    </input-block>
+    <!--<input-title></input-title>-->
+    <!--<field-input></field-input>-->
+    <!--<field-radio-button></field-radio-button>-->
+    <!--<field-select></field-select>-->
+    <!--<date-picker-input></date-picker-input>-->
+
+</div>
 </body>
 </html>

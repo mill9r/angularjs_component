@@ -1,0 +1,26 @@
+.date-picker {
+  &_flex {
+    display: flex;
+  }
+
+  &_border-hidden {
+    border: 0;
+  }
+}
+
+.input {
+  &-dash {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__dash {
+      margin-bottom: 10px;
+    }
+
+    &_indent-top {
+      padding-top: 11px;
+    }
+  }
+
+}

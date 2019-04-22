@@ -1,0 +1,14 @@
+select {
+  display: inline-block;
+
+  &_box-sizing {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+  }
+
+  &__field_indent_s {
+    padding: 0;
+    text-indent: 5px;
+  }
+}

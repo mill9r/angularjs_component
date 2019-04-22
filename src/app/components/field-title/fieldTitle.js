@@ -12,9 +12,14 @@ function inputTitleController() {
 }
 
 
-export const inputTitleComponent ={
-    template: require ('./fieldTitle.component.html'),
-    controller: inputTitleController
+export const inputTitleComponent = {
+    template: require('./fieldTitle.component.html'),
+    controller: inputTitleController,
+    bindings: {
+        orthogonal: '=',
+        column: '=',
+        mainAxis: '='
+    }
 };
 
 // export default inputTitleComponent

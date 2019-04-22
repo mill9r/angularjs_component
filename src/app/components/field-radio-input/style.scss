@@ -1,0 +1,14 @@
+$input-height: 40px;
+
+.radio {
+  &-input {
+    &__border {
+      line-height: $input-height;
+    }
+
+    &_fill-input {
+      display: inline-block;
+      width: 80%;
+    }
+  }
+}

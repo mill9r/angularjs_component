@@ -17,10 +17,3 @@ export const inputFieldComponent = {
     controller: inputFieldController
 };
 
-// export default inputFieldComponent
-
-// angular.module('msmApp')
-//     .component('fieldInput', {
-//         template: require('./fieldInput.component.html'),
-//         controller: inputFieldController
-//     });
