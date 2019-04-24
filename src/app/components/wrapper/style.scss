@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+
+  &_align-orthogonal-axis {
+    align-items: center;
+  }
+
+  &_column {
+    flex-direction: column;
+  }
+
+  &_right-edge {
+    padding-right: 90px;
+  }
+
+  &_width-xl {
+    width: 260px;
+  }
+
+  &_height-xl {
+    height: 97px;
+  }
+
+  &_distribute-evenly {
+    justify-content: space-between;
+  }
+
+  &_side-indent {
+    padding-right: 10px;
+    padding-left: 33px;
+  }
+
+  &_bottom-indent {
+    padding-bottom: 7px;
+  }
+
+  &_center {
+    justify-content: center;
+  }
+
+}

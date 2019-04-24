@@ -6,40 +6,19 @@ $input-height: 40px;
 
 
 .text {
-  display: flex;
-
-  &_align {
-    &-orthogonal-axis {
-      align-items: center;
-    }
-
-    &-main-axis {
-      justify-content: center;
-    }
-
-    &-inner-center {
-      align-self: center;
-    }
+  &_color-gray {
+    color: $color-gray
   }
 
-  &__header_font-t {
-    font-weight: normal;
+  &_font-normal-size {
+    font-weight: normal
   }
 
-  &__body_gray-style {
-    color: $color-gray;
+  &_reseted-margin {
+    margin: 0
   }
 
-  &_reset-margin {
-    margin: 0;
-  }
-
-  &__element_inner {
-    margin-bottom: 7px;
-  }
-
-  &__inner {
-    margin-left: 10px;
-    margin-right: 10px;
+  &_line-height {
+    line-height: 30px;
   }
 }

@@ -3,7 +3,8 @@ import './fieldInput.component.html'
 import './fieldInput.scss'
 
 function inputFieldController() {
-    // const ctrl = this;
+    const ctrl = this;
+    // console.log('ctrl',ctrl)
     // ctrl.setTitle = (value) => {
     //     ctrl.title = value
     // }
@@ -14,6 +15,14 @@ function inputFieldController() {
 
 export const inputFieldComponent = {
     template: require('./fieldInput.component.html'),
-    controller: inputFieldController
+    // controller: inputFieldController,
+    bindings: {
+        size: '@',
+        borderThin: '=',
+        borderHidden: '=',
+        textColor: '=',
+        indentSize: '@',
+        placeholder: '@'
+    }
 };
 

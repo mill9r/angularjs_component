@@ -1,7 +1,10 @@
-<div class="input input-block_right-side-indent">
-    <div class="input">
-        <input class="input__field input__field_size_xl input__field_border_t input__field_indent_s input_inner"
-               type="text"
-               placeholder="e.g. 0777 1234567">
-    </div>
-</div>
+<input ng-class="{'field' : true,
+        'field_border-thin': $ctrl.borderThin,
+        'field_border-hidden': $ctrl.borderHidden,
+        'field_text-color': $ctrl.textColor,
+        'field_text-right-indent-{{$ctrl.indentSize}}': true,
+        'field_size-{{$ctrl.size}}': true,
+        'field_box-sizing': true
+        }"
+       type="text"
+       placeholder="{{$ctrl.placeholder}}">

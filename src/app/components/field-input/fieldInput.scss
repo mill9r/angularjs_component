@@ -4,68 +4,59 @@ $color-gray-light: #A9A9A9;
 $color-white: #FFF;
 $input-height: 40px;
 
-.input {
+.field {
   display: flex;
+  padding: 0;
 
-  &__field {
-    display: inline-block;
+  &_border-thin {
+    border: 1px solid $color-gray-light;
+    border-radius: 3px
+  }
+
+  &_border-hidden {
+    border: 0;
     padding: 0;
-
-    &_border_t {
-      border: 1px solid $color-gray;
-      border-radius: 3px;
-    }
-
-    &_size {
-
-      &_xl {
-        height: $input-height;
-        width: 260px;
-      }
-
-      &_l {
-        height: $input-height;
-        width: 160px;
-      }
-
-      &_m {
-        height: $input-height;
-        width: 120px;
-      }
-
-      &_s {
-        height: $input-height;
-        width: 83px;
-      }
-
-      &_xs {
-        height: $input-height;
-        width: 70px;
-      }
-    }
-
-    &-color {
-      color: $color-gray;
-    }
-
-    &_indent {
-      &_s {
-        padding: 0;
-        text-indent: 10px;
-      }
-
-      &_l {
-        padding: 0;
-        text-indent: 30px;
-      }
-    }
   }
 
-  &_inner {
-    margin-bottom: 10px;
+  &_text-color {
+    color: $color-gray
   }
 
-  &_left-indent {
-    margin-left: 15px;
+  &_text-right-indent-s {
+    text-indent: 5px;
+  }
+
+  &_text-right-indent-m {
+    text-indent: 11px;
+  }
+
+  &_text-right-indent-xl {
+    text-indent: 30px;
+  }
+
+  &_size-xl {
+    height: $input-height;
+    width: 260px;
+  }
+
+  &_size-l {
+    height: $input-height;
+    width: 160px;
+  }
+
+  &_size-s {
+    height: $input-height;
+    width: 83px;
+  }
+
+  &_size-xs {
+    height: $input-height;
+    width: 70px;
+  }
+
+  &_box-sizing {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
   }
 }

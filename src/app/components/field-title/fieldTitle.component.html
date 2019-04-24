@@ -1,5 +1,8 @@
-<div ng-class="{'text':true, 'input-block_left-side-indent': true, 'text_align-orthogonal-axis' : $ctrl.orthogonal, 'input-block__column': $ctrl.column, 'text_align-main-axis': $ctrl.mainAxis}">
-    <div class="text__header text__element_inner text__inner">
-        <h3 class="text__header_font-t text_reset-margin">{{$ctrl.title}}</h3>
-    </div>
-</div>
+<h3 ng-class="
+    {'text': true,
+    'text_font-normal-size' : $ctrl.fontNormalSize,
+    'text_reseted-margin' : $ctrl.resetedMargin,
+    'text_color-gray': $ctrl.colorGray,
+    'text_line-height' : $ctrl.lineHeight
+    }"
+>{{$ctrl.title}}</h3>

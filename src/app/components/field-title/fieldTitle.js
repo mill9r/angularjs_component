@@ -1,6 +1,5 @@
-// import angular from 'angular'
 import './fieldTitle.scss'
-import './fieldTitle.component.html'
+
 
 function inputTitleController() {
     // const ctrl = this;
@@ -14,19 +13,11 @@ function inputTitleController() {
 
 export const inputTitleComponent = {
     template: require('./fieldTitle.component.html'),
-    controller: inputTitleController,
     bindings: {
-        orthogonal: '=',
-        column: '=',
-        mainAxis: '='
+        fontNormalSize: '=',
+        resetedMargin: '=',
+        colorGray: '=',
+        lineHeight: '=',
+        title: '@'
     }
 };
-
-// export default inputTitleComponent
-
-
-// angular.module('msmApp')
-//     .component('inputTitle', {
-//         template: require ('./fieldTitle.component.html'),
-//         controller: inputTitleController
-//     });

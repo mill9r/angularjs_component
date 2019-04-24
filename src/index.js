@@ -8,6 +8,7 @@ import {datePickerInputComponent} from './app/components/date-picker-input/dateP
 import {pageHeader} from './app/components/page-header/pageHeader'
 import {inputBlockComponent} from './app/components/input-block/inputBlock'
 import {blockTextComponent} from './app/components/block-text/blockText'
+import {wrapperController} from "./app/components/wrapper/wrapper";
 
 angular.module('msmApp', [])
     .component('inputTitle', inputTitleComponent)
@@ -17,6 +18,7 @@ angular.module('msmApp', [])
     .component('datePickerInput', datePickerInputComponent)
     .component('pageHeader', pageHeader)
     .component('inputBlock', inputBlockComponent)
-    .component('blockText', blockTextComponent);
+    .component('blockText', blockTextComponent)
+    .component('wrapper', wrapperController);
 
 
