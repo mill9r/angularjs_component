@@ -1,8 +1,14 @@
-<div class="select input input-block_left-side-indent">
-    <select class="select_box-sizing input__field_border_t input_inner select__field_indent_s input__field_size_l input__text-color">
-        <option class="select__field_indent_s" selected disabled hidden>--Month--</option>
-        <option value="a">January</option>
-        <option value="b">February</option>
-        <option value="c">March</option>
-    </select>
-</div>
+<select ng-class="{
+    'field' : true,
+    'field_box-sizing': true,
+    'field_text-right-indent-{{$ctrl.textIndent}}' : true,
+    'field_border-thin' : $ctrl.borderThin,
+    'field_size-{{$ctrl.size}}': true,
+    'field_text-color': $ctrl.textColor
+}
+">
+    <option selected disabled hidden>{{$ctrl.optionTitle}}</option>
+    <option value="a">January</option>
+    <option value="b">February</option>
+    <option value="c">March</option>
+</select>

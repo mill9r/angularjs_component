@@ -1,17 +1,7 @@
 import './style.scss'
 
-function inputTitleController() {
-    const ctrl = this;
-    console.log('ctrl',ctrl)
-    // ctrl.setTitle = (value) => {
-    //     ctrl.title = value
-    // }
-    // ctrl.title = 'value';
-    // this.title = 'value';
-}
 
-export const wrapperController = {
-    controller: inputTitleController,
+export const wrapperComponent = {
     template: require('./html.component.html'),
     transclude: true,
     bindings: {
@@ -21,8 +11,10 @@ export const wrapperController = {
         distributeEvenly: '=',
         alignOrthogonalAxis: '=',
         column: '=',
-        sideIndent: '=',
-        heightXl: '='
+        leftSideIndent: '=',
+        rightSideIndent: '=',
+        heightXl: '=',
+        center: '='
     }
 };
 

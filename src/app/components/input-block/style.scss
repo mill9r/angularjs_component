@@ -1,35 +1,11 @@
 .input-block {
   display: flex;
 
-  &_left-side-indent {
-    padding-left: 23px;
-  }
-
-  &_right-side-indent {
-    padding-right: 90px;
-  }
-
-  &_row {
-    flex-direction: row;
-  }
-
-  &__column {
-    flex-direction: column;
-  }
-
   &_space-between {
     justify-content: space-between;
   }
 
-  &_start-main-axis {
-    justify-content: flex-start;
-  }
-
-  &__center-orthogonal-axis {
-    align-self: center;
-  }
-
   &_bottom-indent {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 }

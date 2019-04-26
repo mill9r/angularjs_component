@@ -25,9 +25,11 @@
     justify-content: space-between;
   }
 
-  &_side-indent {
-    padding-right: 10px;
+  &_left-side-indent {
     padding-left: 33px;
+  }
+  &_right-side-indent {
+    padding-right: 10px;
   }
 
   &_bottom-indent {

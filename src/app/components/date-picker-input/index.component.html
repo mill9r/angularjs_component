@@ -1,25 +1,5 @@
-<div class="date-picker date-picker_flex input input-block_right-side-indent">
-    <div class="date-picker_flex input__field_border_t input__field_size_xl">
-        <div class="input">
-            <input class="input__field  input__field_size_s input_inner input__field_indent_l date-picker_border-hidden"
-                   type="text"
-                   placeholder="DD">
-        </div>
-        <div class="input-dash_indent-top">
-            <div>/</div>
-        </div>
-        <div class="input">
-            <input class="input__field  input__field_size_s input_inner input__field_indent_l date-picker_border-hidden"
-                   type="text"
-                   placeholder="MM">
-        </div>
-        <div class="input-dash_indent-top">
-            <div>/</div>
-        </div>
-        <div class="input">
-            <input class="input__field  input__field_size_s input_inner input__field_indent_l date-picker_border-hidden"
-                   type="text"
-                   placeholder="YYYY">
-        </div>
-    </div>
+<div ng-class="{
+    'date-picker' : true,
+    'date-picker_border-thin' : $ctrl.pickerBorderThin
+    }" ng-transclude>
 </div>

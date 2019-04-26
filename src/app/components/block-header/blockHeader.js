@@ -1,10 +1,10 @@
 import './style.scss'
 
-
-export const datePickerInputComponent = {
+export const blockHeaderComponent = {
     template: require('./index.component.html'),
     transclude: true,
     bindings: {
-        pickerBorderThin: '='
+        navy: '=',
+        topIndent: '='
     }
-}
+};

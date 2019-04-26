@@ -1,15 +1,15 @@
-import './fieldRadioInput.component.html';
 import './style.scss'
 
-function fieldRadioButtonController() {
-    
-}
 
-export const fieldRadioButtonComponent = {
+
+export const fieldRadioInputComponent = {
     template: require('./fieldRadioInput.component.html'),
-    controller : fieldRadioButtonController,
     bindings: {
-        column: '=',
-        row: '='
+        optionsId: '@',
+        optionsName: '@',
+        inputIndent: '=',
+        inputColor: '@',
+        inputWidth: '@',
+        inputTitle: '@'
     }
 };
