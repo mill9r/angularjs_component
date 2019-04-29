@@ -8,13 +8,6 @@ exports.loadCSS = () => ({
         rules: [{
             test: /\.(scss|sass)$/,
             use: [
-                // MiniCssExtractPlugin.loader,
-                // {
-                //     loader: "style-loader",
-                //     options: {
-                //         sourceMap: true
-                //     }
-                // },
                 {
                     loader: "css-loader",
                     options: {

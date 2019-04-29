@@ -6,9 +6,9 @@
     'field_size-{{$ctrl.size}}': true,
     'field_text-color': $ctrl.textColor
 }
-">
-    <option selected disabled hidden>{{$ctrl.optionTitle}}</option>
-    <option value="a">January</option>
-    <option value="b">February</option>
-    <option value="c">March</option>
+" ng-options="value in $ctrl.form">
+<!--    <option ng-repeat="value in $ctrl.form" selected disabled hidden>{{$ctrl.optionTitle}}</option>-->
+<!--    <option value="a">January</option>-->
+<!--    <option value="b">February</option>-->
+<!--    <option value="c">March</option>-->
 </select>

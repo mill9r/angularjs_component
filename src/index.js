@@ -1,4 +1,5 @@
 import angular from 'angular'
+import ngRedux from 'ng-redux'
 import {inputTitleComponent} from './app/components/field-title/fieldTitle'
 import {inputFieldComponent} from './app/components/field-input/fieldInput'
 import {fieldRadioInputComponent} from './app/components/field-radio-input/fieldRadioInput'
@@ -10,8 +11,10 @@ import {blockHeaderComponent} from './app/components/block-header/blockHeader'
 import {wrapperComponent} from "./app/components/wrapper/wrapper";
 import {titleCommentComponent} from './app/components/field-title-comment/fieldTitleComment'
 import {wrapperInputComponent} from './app/components/wrapper-input/wrapperInput'
+import {controller} from './app'
+import {rootReducer} from './app/reducers/index'
 
-angular.module('msmApp', [])
+angular.module('msmApp', [ngRedux])
     .component('inputTitle', inputTitleComponent)
     .component('fieldInput', inputFieldComponent)
     .component('fieldRadioInput', fieldRadioInputComponent)
@@ -22,6 +25,8 @@ angular.module('msmApp', [])
     .component('blockHeader', blockHeaderComponent)
     .component('wrapper', wrapperComponent)
     .component('titleComment', titleCommentComponent)
-    .component('wrapperInput',wrapperInputComponent);
+    .component('wrapperInput', wrapperInputComponent)
+    .component('app', controller)
+    .config(rootReducer);
 
 
