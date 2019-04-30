@@ -5,10 +5,8 @@
     'field_border-thin' : $ctrl.borderThin,
     'field_size-{{$ctrl.size}}': true,
     'field_text-color': $ctrl.textColor
-}
-" ng-options="value in $ctrl.form">
-<!--    <option ng-repeat="value in $ctrl.form" selected disabled hidden>{{$ctrl.optionTitle}}</option>-->
-<!--    <option value="a">January</option>-->
-<!--    <option value="b">February</option>-->
-<!--    <option value="c">March</option>-->
+}">
+    <!--    <option ng-repeat="value in $ctrl.form" selected disabled hidden>{{$ctrl.optionTitle}}</option>-->
+    <option value="0" label="{{$ctrl.optionTitle}}">{{$ctrl.optionTitle}}</option>
+    <option ng-repeat="value in $ctrl.form" value="{{value}}" on-select="$ctrl.onSelect(value)">{{value}}</option>
 </select>

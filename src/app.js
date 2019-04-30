@@ -1,13 +1,23 @@
 class Controller {
-    constructor($ngRedux) {
-        this.unsubscribe = $ngRedux.connect(this.mapStateToProps)(this)
+    constructor($scope, $ngRedux) {
+        this.unsubscribe = $ngRedux.connect(this.mapStateToThis, {})(this)
     }
 
-    mapStateToProps(state) {
+    mapStateToThis(state) {
         return {
-            form: state
+            form: state.store
         };
     }
+
+    select() {
+        console.log('form', this.form)
+        // this.onSelect({carrier});
+    }
+
+    submit() {
+        console.log('Form:',this.form);
+    }
+
 
     $onDestroy() {
         this.unsubscribe();

@@ -1,6 +1,5 @@
 import './style.scss'
 
-
 export const wrapperComponent = {
     template: require('./html.component.html'),
     transclude: true,
@@ -14,7 +13,7 @@ export const wrapperComponent = {
         leftSideIndent: '=',
         rightSideIndent: '=',
         heightXl: '=',
-        center: '='
+        center: '=',
     }
 };
 

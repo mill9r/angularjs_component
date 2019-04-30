@@ -2,7 +2,6 @@ import '../../style/style.scss'
 
 
 
-
 export const inputFieldComponent = {
     template: require('./fieldInput.component.html'),
     bindings: {
@@ -11,7 +10,8 @@ export const inputFieldComponent = {
         borderHidden: '=',
         textColor: '=',
         indentSize: '@',
-        placeholder: '@'
+        placeholder: '@',
+        inputValue: '='
     }
 };
 

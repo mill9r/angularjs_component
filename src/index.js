@@ -12,9 +12,9 @@ import {wrapperComponent} from "./app/components/wrapper/wrapper";
 import {titleCommentComponent} from './app/components/field-title-comment/fieldTitleComment'
 import {wrapperInputComponent} from './app/components/wrapper-input/wrapperInput'
 import {controller} from './app'
-import {rootReducer} from './app/reducers/index'
+import configureStore from './app/store/configureStore'
 
-angular.module('msmApp', [ngRedux])
+angular.module('msmApp', ['ngRedux'])
     .component('inputTitle', inputTitleComponent)
     .component('fieldInput', inputFieldComponent)
     .component('fieldRadioInput', fieldRadioInputComponent)
@@ -27,6 +27,6 @@ angular.module('msmApp', [ngRedux])
     .component('titleComment', titleCommentComponent)
     .component('wrapperInput', wrapperInputComponent)
     .component('app', controller)
-    .config(rootReducer);
+    .config(configureStore);
 
 

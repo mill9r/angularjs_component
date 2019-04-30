@@ -18,15 +18,20 @@ const mockState = {
 
 };
 
+const action = {
+    type: 'MODIFY_USERNAME',
+    payload: 'new name',
+};
+
 
 function reducer(state = mockState, action) {
-    // switch (action.type) {
-    //     default:
-    //         return state;
-    // }
+    switch (action.type) {
+        default:
+            return state;
+    }
 
     return state;
 }
 
 
-export const rootReducer = combineReducers({todo:reducer});
+export const rootReducer = combineReducers({store:reducer});
