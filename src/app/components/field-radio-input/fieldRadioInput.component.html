@@ -1,8 +1,12 @@
-<input type="radio" id='{{$ctrl.optionsId}}' name="$ctrl.optionsName" ng-class="
-    {
-        'radio-input' : true,
-        'radio-input_indent' : $ctrl.inputIndent
-    }
+<input ng-model="$ctrl.selectedOptions"
+       type="radio"
+       id='{{$ctrl.optionsId}}'
+       ng-value="$ctrl.inputTitle"
+       ng-class="
+        {
+            'radio-input' : true,
+            'radio-input_indent' : $ctrl.inputIndent
+        }
 ">
 <label ng-class="
     {

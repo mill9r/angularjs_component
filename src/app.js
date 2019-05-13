@@ -14,8 +14,9 @@ class Controller {
         // this.onSelect({carrier});
     }
 
+
     submit() {
-        console.log('Form:',this.form);
+        console.log('Form:', this.form);
     }
 
 

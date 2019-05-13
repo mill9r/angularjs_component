@@ -1,21 +1,20 @@
 import {combineReducers} from 'redux'
 
 const mockState = {
-    honorifics: ['Mr.', 'Miss', 'Mrs.', 'Ms.', 'Mx.'],
+    honorifics: {title: ['Mr.', 'Miss', 'Mrs.', 'Ms.', 'Mx.'], selectedHonorifics: ''},
     name: '',
     surname: '',
-    employmentStatus: ['Employee', 'Worker', 'Self-employed', 'Freelance'],
-    impairment: false,
-    currentEmail: 'mi@mail.com',
-    newEmail: '',
+    employmentStatus: {title: ['Employee', 'Worker', 'Self-employed', 'Freelance'], selectedEmployment: ''},
+    impairment: {options:['Yes','No'],selected:''},
+    email: {options:['mi11@mail.ru','Enter a new email address'], selected:'' },
     phoneNumber: '',
-    dateOfBirth: '28.03.1990',
-    sortCode: ['111', '222', '333'],
+    dateOfBirth:{input:['DD','MM','YYYY'], output: ['','','']} ,
+    sortCode: {input:['','',''], output: ['','','']},
     movementAddress: {
         months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        selectedMonth: '',
         day: ''
     }
-
 };
 
 const action = {
@@ -34,4 +33,4 @@ function reducer(state = mockState, action) {
 }
 
 
-export const rootReducer = combineReducers({store:reducer});
+export const rootReducer = combineReducers({store: reducer});

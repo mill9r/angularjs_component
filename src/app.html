@@ -6,14 +6,15 @@
 </block-header>
 <block-header data-top-indent="true"><h3 class="heading heading_navy-color">Please provide your personal
     details</h3></block-header>
-<form  ng-submit="$ctrl.submit()" novalidate>
+<form ng-submit="$ctrl.submit()" novalidate>
     <input-block>
         <wrapper class="display-flex" data-bottom-indent="true" data-align-orthogonal-axis="true"
                  data-left-side-indent="true">
             <input-title data-font-normal-size="true" data-reseted-margin="true" data-title="Title"></input-title>
         </wrapper>
         <wrapper data-right-edge="true" data-bottom-indent="true">
-            <field-select data-on-select="$ctrl.select" form="$ctrl.form.honorifics" data-text-indent="s"
+            <field-select data-selected-options="$ctrl.form.honorifics.selectedHonorifics"
+                          form="$ctrl.form.honorifics.title" data-text-indent="s"
                           data-border-thin="true" data-size="xl"
                           data-text-color="true"
                           data-option-title="--Please select--">
@@ -36,7 +37,7 @@
         </wrapper>
     </input-block>
     <input-block>
-        <wrapper data-bottom-indent="true" data-column="true" data-left-side-indent="true">
+        <wrapper data-bottom-indent="true" data-column="true" data-left-side-indent="true" data-right-side-indent="true">
             <input-title data-line-height="true" data-font-normal-size="true" data-reseted-margin="true"
                          data-title="Employment status"></input-title>
             <title-comment data-font-size="normal" data-reseted-margin="true" data-color-gray="true"
@@ -44,7 +45,9 @@
                 needed for the provider to complete their credit checks"></title-comment>
         </wrapper>
         <wrapper data-right-edge="true" data-bottom-indent="true">
-            <field-select form="$ctrl.form.employmentStatus" data-text-indent="s" data-border-thin="true" data-size="xl"
+            <field-select form="$ctrl.form.employmentStatus.title"
+                          data-selected-options="$ctrl.form.employmentStatus.selectedEmployment" data-text-indent="s"
+                          data-border-thin="true" data-size="xl"
                           data-text-color="true"
                           data-option-title="--Please select--">
             </field-select>
@@ -57,16 +60,14 @@
                 hearing impairment?"></input-title>
         </wrapper>
         <wrapper data-right-edge="true" data-bottom-indent="true" data-width-xl="true" data-distribute-evenly="true">
-            <wrapper-input data-border="true" data-size="m" data-y-axe-indent="true">
-                <field-radio-input data-options-id="yes" data-options-name="impairment" data-input-indent="true"
-                                   data-input-color="gray"
-                                   data-input-width="l" data-input-title="Yes"></field-radio-input>
-            </wrapper-input>
-            <wrapper-input data-border="true" data-size="m" data-y-axe-indent="true">
-                <field-radio-input data-options-id="no" data-options-name="impairment" data-input-indent="true"
-                                   data-input-color="gray"
-                                   data-input-width="l" data-input-title="No"></field-radio-input>
-            </wrapper-input>
+            <div ng-repeat="item in $ctrl.form.impairment.options">
+                <wrapper-input data-border="true" data-size="m" data-y-axe-indent="true">
+                    <field-radio-input data-selected-options="$ctrl.form.impairment.selected" data-options-id="{{item}}"
+                                       data-input-indent="true"
+                                       data-input-color="gray"
+                                       data-input-width="l" data-input-title="{{item}}"></field-radio-input>
+                </wrapper-input>
+            </div>
         </wrapper>
     </input-block>
     <input-block>
@@ -79,18 +80,15 @@
         </wrapper>
         <wrapper data-right-edge="true" data-bottom-indent="true" data-column="true" data-height-xl="true"
                  data-distribute-evenly="true">
-            <wrapper-input data-border="true" data-size="xl" data-y-axe-indent="true">
-                <field-radio-input data-options-id="oldEmail" data-options-name="email" data-input-indent="true"
-                                   data-input-color="gray"
-                                   data-input-width="l"
-                                   data-input-title="{{$ctrl.form.currentEmail}}"></field-radio-input>
-            </wrapper-input>
-            <wrapper-input data-border="true" data-size="xl" data-y-axe-indent="true">
-                <field-radio-input data-options-id="newEmail" data-options-name="email" data-input-indent="true"
-                                   data-input-color="gray"
-                                   data-input-width="l"
-                                   data-input-title="Enter a new email address"></field-radio-input>
-            </wrapper-input>
+            <div ng-repeat="item in $ctrl.form.email.options" ng-model="$ctrl.form.email.selected">
+                <wrapper-input data-border="true" data-size="xl" data-y-axe-indent="true">
+                    <field-radio-input data-selected-options="$ctrl.form.email.selected" data-options-id="{{item}}"
+                                       data-input-indent="true"
+                                       data-input-color="gray"
+                                       data-input-width="l"
+                                       data-input-title="{{item}}"></field-radio-input>
+                </wrapper-input>
+            </div>
         </wrapper>
     </input-block>
     <input-block>
@@ -100,7 +98,8 @@
                          data-title="Telephone number"></input-title>
         </wrapper>
         <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-column="true">
-            <field-input data-border-thin="true" data-text-color="true" data-indent-size="m"
+            <field-input data-input-value="$ctrl.form.phoneNumber" data-border-thin="true" data-text-color="true"
+                         data-indent-size="m"
                          data-size="xl" data-placeholder="e.g. 0777 1234567"></field-input>
         </wrapper>
     </input-block>
@@ -114,14 +113,12 @@
         </wrapper>
         <wrapper class="display-flex" data-bottom-indent="true" data-right-edge="true">
             <date-picker-input class="display-flex" data-picker-border-thin="true">
-                <field-input data-indent-size="xl" data-border-hidden="true" data-size="s"
-                             data-placeholder="DD"></field-input>
-                <div class="input-dash">/</div>
-                <field-input data-indent-size="xl" data-border-hidden="true" data-size="s"
-                             data-placeholder="MM"></field-input>
-                <div class="input-dash">/</div>
-                <field-input data-indent-size="xl" data-border-hidden="true" data-size="s"
-                             data-placeholder="YYYY"></field-input>
+                <wrapper class="display-flex" data-no-border="true" ng-repeat="item in $ctrl.form.dateOfBirth.input">
+                    <field-input data-input-value="$ctrl.form.dateOfBirth.output[$index]" data-indent-size="xl"
+                                 data-border-hidden="true" data-size="s"
+                                 data-placeholder="{{item}}"></field-input>
+                    <div ng-if="$index !== $ctrl.form.dateOfBirth.input.length - 1" class="input-dash">/</div>
+                </wrapper>
             </date-picker-input>
         </wrapper>
     </input-block>
@@ -132,15 +129,16 @@
                          data-title="Sort code"></input-title>
         </wrapper>
         <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-width-xl="true">
-            <field-input data-indent-size="xl" data-size="xs"
-                         data-placeholder=""></field-input>
-            <div class="input-dash">-</div>
-            <field-input data-indent-size="xl" data-size="xs"
-                         data-placeholder=""></field-input>
-            <div class="input-dash">-</div>
-            <field-input data-indent-size="xl" data-size="xs"
-                         data-placeholder=""></field-input>
-        </wrapper>
+            <wrapper class="display-flex" data-no-border="true"
+                     ng-repeat="item in $ctrl.form.sortCode.input track by $index">
+                <field-input data-input-value="$ctrl.form.sortCode.output[$index]" data-indent-size="xl" data-size="xs"
+                             data-placeholder="{{item}}"></field-input>
+                <!--                TODO fix it-->
+                <div ng-if="$index != $ctrl.form.sortCode.input.length - 1" class="input-dash" style="color: #FFFFFF">
+                    -
+                </div>
+                <div ng-if="$index != $ctrl.form.sortCode.input.length - 1" class="input-dash">-</div>
+            </wrapper>
     </input-block>
     <input-block>
         <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"
@@ -149,12 +147,14 @@
                          data-title="When did you move in to your billing address?"></input-title>
         </wrapper>
         <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-width-xl="true">
-            <field-select form="$ctrl.form.movementAddress.months" data-text-indent="s" data-border-thin="true"
+            <field-select form="$ctrl.form.movementAddress.months"
+                          data-selected-options="$ctrl.form.movementAddress.selectedMonth" data-text-indent="s"
+                          data-border-thin="true"
                           data-size="l" data-text-color="true"
                           data-option-title="--Please select--">
             </field-select>
-            <field-input data-indent-size="m" data-size="s"
-                         data-placeholder="Surname"></field-input>
+            <field-input data-indent-size="m" data-size="s" data-input-value="$ctrl.form.movementAddress.day"
+                         data-placeholder=""></field-input>
         </wrapper>
     </input-block>
     <button type="submit" ng-click="select()">Submit form</button>

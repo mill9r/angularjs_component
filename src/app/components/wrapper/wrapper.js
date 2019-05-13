@@ -14,6 +14,7 @@ export const wrapperComponent = {
         rightSideIndent: '=',
         heightXl: '=',
         center: '=',
+        noBorder: '='
     }
 };
 

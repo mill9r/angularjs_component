@@ -28,6 +28,7 @@
   &_left-side-indent {
     padding-left: 33px;
   }
+
   &_right-side-indent {
     padding-right: 10px;
   }
@@ -38,6 +39,10 @@
 
   &_center {
     justify-content: center;
+  }
+
+  &_no-border {
+    border: 0 solid #FFFFFF;
   }
 
 }

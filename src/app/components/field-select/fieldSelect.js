@@ -10,6 +10,6 @@ export const fieldSelectComponent = {
         textColor: '=',
         optionTitle: '@',
         form: '=',
-        onSelect: '&'
+        selectedOptions: '=',
     }
 };

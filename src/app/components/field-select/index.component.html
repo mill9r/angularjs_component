@@ -1,4 +1,6 @@
-<select ng-class="{
+<select
+        ng-model="$ctrl.selectedOptions"
+        ng-class="{
     'field' : true,
     'field_box-sizing': true,
     'field_text-right-indent-{{$ctrl.textIndent}}' : true,
@@ -6,7 +8,8 @@
     'field_size-{{$ctrl.size}}': true,
     'field_text-color': $ctrl.textColor
 }">
-    <!--    <option ng-repeat="value in $ctrl.form" selected disabled hidden>{{$ctrl.optionTitle}}</option>-->
-    <option value="0" label="{{$ctrl.optionTitle}}">{{$ctrl.optionTitle}}</option>
-    <option ng-repeat="value in $ctrl.form" value="{{value}}" on-select="$ctrl.onSelect(value)">{{value}}</option>
+    <option value="">{{$ctrl.optionTitle}}</option>
+    <option ng-selected="$ctrl.optionTitle" ng-repeat="option in $ctrl.form" value="{{option}}">{{option}}</option>
 </select>
+
+
