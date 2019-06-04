@@ -1,10 +1,12 @@
-import {combineReducers} from "redux";
-import logger from "redux-logger";
+import {combineReducers, applyMiddleware, createStore} from "redux";
+import {createLogger} from 'redux-logger';
+import reducers from '../reducers/index'
 
-import {rootReducer} from "../../app/reducers/index";
+
+// import {rootReducer} from "../../app/reducers/index";
+const rootReducer = combineReducers(reducers);
+const store = createStore(rootReducer, applyMiddleware(createLogger()));
 
 export default function ($ngReduxProvider) {
-    "ngInject";
-    $ngReduxProvider.createStoreWith(rootReducer,
-        [logger]);
+    $ngReduxProvider.provideStore(store)
 }

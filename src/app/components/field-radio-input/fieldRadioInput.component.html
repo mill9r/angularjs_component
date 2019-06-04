@@ -1,7 +1,9 @@
-<input ng-model="$ctrl.selectedOptions"
+<input ng-model="$ctrl.selectedOption"
+       ng-blur="$ctrl.onInput({value:$ctrl.selectedOption, name:$ctrl.inputName})"
        type="radio"
        id='{{$ctrl.optionsId}}'
        ng-value="$ctrl.inputTitle"
+       name="{{$ctrl.inputName}}"
        ng-class="
         {
             'radio-input' : true,

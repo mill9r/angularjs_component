@@ -7,155 +7,201 @@
 <block-header data-top-indent="true"><h3 class="heading heading_navy-color">Please provide your personal
     details</h3></block-header>
 <form ng-submit="$ctrl.submit()" novalidate>
-    <input-block>
-        <wrapper class="display-flex" data-bottom-indent="true" data-align-orthogonal-axis="true"
-                 data-left-side-indent="true">
-            <input-title data-font-normal-size="true" data-reseted-margin="true" data-title="Title"></input-title>
-        </wrapper>
-        <wrapper data-right-edge="true" data-bottom-indent="true">
-            <field-select data-selected-options="$ctrl.form.honorifics.selectedHonorifics"
-                          form="$ctrl.form.honorifics.title" data-text-indent="s"
-                          data-border-thin="true" data-size="xl"
-                          data-text-color="true"
-                          data-option-title="--Please select--">
-            </field-select>
-        </wrapper>
-    </input-block>
-    <input-block>
-        <wrapper data-bottom-indent="true" data-align-orthogonal-axis="true" data-left-side-indent="true">
-            <input-title data-font-normal-size="true" data-reseted-margin="true" data-title="Name"></input-title>
-        </wrapper>
+<!--    <input-block>-->
+        <input-block-template ng-class="{
+        'input-block': true,
+        'input-block_space-between' : true,
+        'input-block_bottom-indent': true
+         }" ng-repeat="item in $ctrl.data" data-block-data="item" data-on-input="$ctrl.updateStore(value, name)"></input-block-template>
 
-        <wrapper data-right-edge="true" data-bottom-indent="true" data-height-xl="true"
-                 data-distribute-evenly="true" data-column="true">
-            <field-input data-input-value="$ctrl.form.name" data-border-thin="true" data-text-color="true"
-                         data-indent-size="m"
-                         data-size="xl" data-placeholder="First name"></field-input>
-            <field-input data-input-value="$ctrl.form.surname" data-border-thin="true" data-text-color="true"
-                         data-indent-size="m"
-                         data-size="xl" data-placeholder="Surname"></field-input>
-        </wrapper>
-    </input-block>
-    <input-block>
-        <wrapper data-bottom-indent="true" data-column="true" data-left-side-indent="true" data-right-side-indent="true">
-            <input-title data-line-height="true" data-font-normal-size="true" data-reseted-margin="true"
-                         data-title="Employment status"></input-title>
-            <title-comment data-font-size="normal" data-reseted-margin="true" data-color-gray="true"
-                           data-comment-title="The following information is
-                needed for the provider to complete their credit checks"></title-comment>
-        </wrapper>
-        <wrapper data-right-edge="true" data-bottom-indent="true">
-            <field-select form="$ctrl.form.employmentStatus.title"
-                          data-selected-options="$ctrl.form.employmentStatus.selectedEmployment" data-text-indent="s"
-                          data-border-thin="true" data-size="xl"
-                          data-text-color="true"
-                          data-option-title="--Please select--">
-            </field-select>
-        </wrapper>
-    </input-block>
-    <input-block>
-        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"
-                 data-center="true">
-            <input-title data-font-normal-size="true" data-reseted-margin="true" data-title="Do you have special needs, such as visual or
-                hearing impairment?"></input-title>
-        </wrapper>
-        <wrapper data-right-edge="true" data-bottom-indent="true" data-width-xl="true" data-distribute-evenly="true">
-            <div ng-repeat="item in $ctrl.form.impairment.options">
-                <wrapper-input data-border="true" data-size="m" data-y-axe-indent="true">
-                    <field-radio-input data-selected-options="$ctrl.form.impairment.selected" data-options-id="{{item}}"
-                                       data-input-indent="true"
-                                       data-input-color="gray"
-                                       data-input-width="l" data-input-title="{{item}}"></field-radio-input>
-                </wrapper-input>
-            </div>
-        </wrapper>
-    </input-block>
-    <input-block>
-        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"
-                 data-center="true" data-right-side-indent="true">
-            <input-title data-font-normal-size="true" data-reseted-margin="true" data-line-height="true"
-                         data-title="Email Address"></input-title>
-            <title-comment data-font-size="normal" data-reseted-margin="true" data-color-gray="true"
-                           data-comment-title="This email address will be used by the supplier to confirm and activate your application. Please make sure it's correct."></title-comment>
-        </wrapper>
-        <wrapper data-right-edge="true" data-bottom-indent="true" data-column="true" data-height-xl="true"
-                 data-distribute-evenly="true">
-            <div ng-repeat="item in $ctrl.form.email.options" ng-model="$ctrl.form.email.selected">
-                <wrapper-input data-border="true" data-size="xl" data-y-axe-indent="true">
-                    <field-radio-input data-selected-options="$ctrl.form.email.selected" data-options-id="{{item}}"
-                                       data-input-indent="true"
-                                       data-input-color="gray"
-                                       data-input-width="l"
-                                       data-input-title="{{item}}"></field-radio-input>
-                </wrapper-input>
-            </div>
-        </wrapper>
-    </input-block>
-    <input-block>
-        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"
-                 data-center="true">
-            <input-title data-font-normal-size="true" data-reseted-margin="true"
-                         data-title="Telephone number"></input-title>
-        </wrapper>
-        <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-column="true">
-            <field-input data-input-value="$ctrl.form.phoneNumber" data-border-thin="true" data-text-color="true"
-                         data-indent-size="m"
-                         data-size="xl" data-placeholder="e.g. 0777 1234567"></field-input>
-        </wrapper>
-    </input-block>
-    <input-block>
-        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"
-                 data-center="true" data-right-side-indent="true">
-            <input-title data-font-normal-size="true" data-reseted-margin="true" data-line-height="true"
-                         data-title="Date of Birth"></input-title>
-            <title-comment data-font-size="normal" data-reseted-margin="true" data-color-gray="true"
-                           data-comment-title="For example: 30/10/1984"></title-comment>
-        </wrapper>
-        <wrapper class="display-flex" data-bottom-indent="true" data-right-edge="true">
-            <date-picker-input class="display-flex" data-picker-border-thin="true">
-                <wrapper class="display-flex" data-no-border="true" ng-repeat="item in $ctrl.form.dateOfBirth.input">
-                    <field-input data-input-value="$ctrl.form.dateOfBirth.output[$index]" data-indent-size="xl"
-                                 data-border-hidden="true" data-size="s"
-                                 data-placeholder="{{item}}"></field-input>
-                    <div ng-if="$index !== $ctrl.form.dateOfBirth.input.length - 1" class="input-dash">/</div>
-                </wrapper>
-            </date-picker-input>
-        </wrapper>
-    </input-block>
-    <input-block>
-        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"
-                 data-center="true">
-            <input-title data-font-normal-size="true" data-reseted-margin="true"
-                         data-title="Sort code"></input-title>
-        </wrapper>
-        <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-width-xl="true">
-            <wrapper class="display-flex" data-no-border="true"
-                     ng-repeat="item in $ctrl.form.sortCode.input track by $index">
-                <field-input data-input-value="$ctrl.form.sortCode.output[$index]" data-indent-size="xl" data-size="xs"
-                             data-placeholder="{{item}}"></field-input>
-                <!--                TODO fix it-->
-                <div ng-if="$index != $ctrl.form.sortCode.input.length - 1" class="input-dash" style="color: #FFFFFF">
-                    -
-                </div>
-                <div ng-if="$index != $ctrl.form.sortCode.input.length - 1" class="input-dash">-</div>
-            </wrapper>
-    </input-block>
-    <input-block>
-        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"
-                 data-center="true">
-            <input-title data-font-normal-size="true" data-reseted-margin="true"
-                         data-title="When did you move in to your billing address?"></input-title>
-        </wrapper>
-        <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-width-xl="true">
-            <field-select form="$ctrl.form.movementAddress.months"
-                          data-selected-options="$ctrl.form.movementAddress.selectedMonth" data-text-indent="s"
-                          data-border-thin="true"
-                          data-size="l" data-text-color="true"
-                          data-option-title="--Please select--">
-            </field-select>
-            <field-input data-indent-size="m" data-size="s" data-input-value="$ctrl.form.movementAddress.day"
-                         data-placeholder=""></field-input>
-        </wrapper>
-    </input-block>
-    <button type="submit" ng-click="select()">Submit form</button>
+    <!--        }" ng-repeat="item in data" data-block-data="{{item}}" data-on-input="$ctrl.updateStore(value, name)"></input-block-template>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper class="display-flex" data-bottom-indent="true" data-align-orthogonal-axis="true"-->
+<!--                 data-left-side-indent="true">-->
+<!--            <input-title data-font-normal-size="true" data-reseted-margin="true" data-title="Title"></input-title>-->
+<!--        </wrapper>-->
+<!--        <wrapper data-right-edge="true" data-bottom-indent="true">-->
+<!--            <field-select data-input-name="honorifics"-->
+<!--                          data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                          options="[{name: 'Mr.', value: 'Mr.'},{name: 'Miss.', value: 'Miss.'},{name: 'Mrs.', value: 'Mrs.'},{name: 'Ms.', value: 'Ms.'}]"-->
+<!--                          data-text-indent="s"-->
+<!--                          data-border-thin="true" data-size="xl"-->
+<!--                          data-text-color="true"-->
+<!--                          data-option-title="&#45;&#45;Please select&#45;&#45;">-->
+<!--            </field-select>-->
+<!--        </wrapper>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper data-bottom-indent="true" data-align-orthogonal-axis="true" data-left-side-indent="true">-->
+<!--            <input-title data-font-normal-size="true" data-reseted-margin="true" data-title="Name"></input-title>-->
+<!--        </wrapper>-->
+
+<!--        <wrapper data-right-edge="true" data-bottom-indent="true" data-height-xl="true"-->
+<!--                 data-distribute-evenly="true" data-column="true">-->
+
+<!--            <field-input data-on-input="$ctrl.updateStore(value, name)" data-input-value="$ctrl.form.name"-->
+<!--                         data-input-name="firstName"-->
+<!--                         data-border-thin="true" data-text-color="true"-->
+<!--                         data-indent-size="m"-->
+<!--                         data-size="xl" data-placeholder="First name"></field-input>-->
+<!--            <field-input data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                         data-input-name="surname"-->
+<!--                         data-input-value="$ctrl.form.surname" data-border-thin="true" data-text-color="true"-->
+<!--                         data-indent-size="m"-->
+<!--                         data-size="xl" data-placeholder="Surname"></field-input>-->
+<!--        </wrapper>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper data-bottom-indent="true" data-column="true" data-left-side-indent="true"-->
+<!--                 data-right-side-indent="true">-->
+<!--            <input-title data-line-height="true" data-font-normal-size="true" data-reseted-margin="true"-->
+<!--                         data-title="Employment status"></input-title>-->
+<!--            <title-comment data-font-size="normal" data-reseted-margin="true" data-color-gray="true"-->
+<!--                           data-comment-title="The following information is-->
+<!--                needed for the provider to complete their credit checks"></title-comment>-->
+<!--        </wrapper>-->
+<!--        <wrapper data-right-edge="true" data-bottom-indent="true">-->
+<!--            <field-select data-input-name="employmentStatus"-->
+<!--                          data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                          options="[{name: 'Employee', value: 'Employee'},{name: 'Worker', value: 'Worker'},{name: 'Self-employed', value: 'Self-employed'},{name: 'Freelance', value: 'Freelance'}]"-->
+<!--                          data-text-indent="s"-->
+<!--                          form="$ctrl.form.employmentStatus.title"-->
+<!--                          data-selected-options="$ctrl.form.employmentStatus.selectedEmployment" data-text-indent="s"-->
+<!--                          data-border-thin="true" data-size="xl"-->
+<!--                          data-text-color="true"-->
+<!--                          data-option-title="&#45;&#45;Please select&#45;&#45;">-->
+<!--            </field-select>-->
+<!--        </wrapper>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"-->
+<!--                 data-center="true">-->
+<!--            <input-title data-font-normal-size="true" data-reseted-margin="true" data-title="Do you have special needs, such as visual or-->
+<!--                hearing impairment?"></input-title>-->
+<!--        </wrapper>-->
+<!--        <wrapper data-right-edge="true" data-bottom-indent="true" data-width-xl="true" data-distribute-evenly="true">-->
+<!--            <div ng-repeat="item in ['Yes', 'No']">-->
+<!--                <wrapper-input data-border="true" data-size="m" data-y-axe-indent="true">-->
+<!--                    <field-radio-input data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                                       data-input-name="impairment"-->
+<!--                                       data-selected-option="impairment[$index]"-->
+<!--                                       data-options-id="{{item}}"-->
+<!--                                       data-input-indent="true"-->
+<!--                                       data-input-color="gray"-->
+<!--                                       data-input-width="l" data-input-title="{{item}}"></field-radio-input>-->
+<!--                </wrapper-input>-->
+<!--            </div>-->
+<!--        </wrapper>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"-->
+<!--                 data-center="true" data-right-side-indent="true">-->
+<!--            <input-title data-font-normal-size="true" data-reseted-margin="true" data-line-height="true"-->
+<!--                         data-title="Email Address"></input-title>-->
+<!--            <title-comment data-font-size="normal" data-reseted-margin="true" data-color-gray="true"-->
+<!--                           data-comment-title="This email address will be used by the supplier to confirm and activate your application. Please make sure it's correct."></title-comment>-->
+<!--        </wrapper>-->
+<!--        <wrapper data-right-edge="true" data-bottom-indent="true" data-column="true" data-height-xl="true"-->
+<!--                 data-distribute-evenly="true">-->
+<!--            <div ng-repeat="item in ['mi11@mail.ru', 'Enter a new email address']" ng-model="$ctrl.form.email.selected">-->
+<!--                <wrapper-input data-border="true" data-size="xl" data-y-axe-indent="true">-->
+<!--                    <field-radio-input data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                                       data-selected-option="email"-->
+<!--                                       data-input-name="email"-->
+<!--                                       data-options-id="{{item}}"-->
+<!--                                       data-input-indent="true"-->
+<!--                                       data-input-color="gray"-->
+<!--                                       data-input-width="l"-->
+<!--                                       data-input-title="{{item}}"></field-radio-input>-->
+<!--                </wrapper-input>-->
+<!--            </div>-->
+<!--        </wrapper>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"-->
+<!--                 data-center="true">-->
+<!--            <input-title data-font-normal-size="true" data-reseted-margin="true"-->
+<!--                         data-title="Telephone number"></input-title>-->
+<!--        </wrapper>-->
+<!--        <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-column="true">-->
+<!--            <field-input data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                         data-input-name="phoneNumber"-->
+<!--                         data-input-value="$ctrl.form.phoneNumber" data-border-thin="true" data-text-color="true"-->
+<!--                         data-indent-size="m"-->
+<!--                         data-size="xl" data-placeholder="e.g. 0777 1234567"></field-input>-->
+<!--        </wrapper>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"-->
+<!--                 data-center="true" data-right-side-indent="true">-->
+<!--            <input-title data-font-normal-size="true" data-reseted-margin="true" data-line-height="true"-->
+<!--                         data-title="Date of Birth"></input-title>-->
+<!--            <title-comment data-font-size="normal" data-reseted-margin="true" data-color-gray="true"-->
+<!--                           data-comment-title="For example: 30/10/1984"></title-comment>-->
+<!--        </wrapper>-->
+<!--        <wrapper class="display-flex" data-bottom-indent="true" data-right-edge="true">-->
+<!--            <date-picker-input class="display-flex" data-picker-border-thin="true">-->
+<!--                <wrapper class="display-flex" data-no-border="true" ng-repeat="item in $ctrl.form.dateOfBirth.input">-->
+<!--                    <field-input data-input-name="{{item}}"-->
+<!--                                 data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                                 data-input-value="$ctrl.form.dateOfBirth.output[$index]" data-indent-size="xl"-->
+<!--                                 data-border-hidden="true" data-size="s"-->
+<!--                                 data-placeholder="{{item}}"></field-input>-->
+<!--                    <div ng-if="$index !== $ctrl.form.dateOfBirth.input.length - 1" class="input-dash">/</div>-->
+<!--                </wrapper>-->
+<!--            </date-picker-input>-->
+<!--        </wrapper>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"-->
+<!--                 data-center="true">-->
+<!--            <input-title data-font-normal-size="true" data-reseted-margin="true"-->
+<!--                         data-title="Sort code"></input-title>-->
+<!--        </wrapper>-->
+<!--        <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-width-xl="true">-->
+<!--            <wrapper class="display-flex" data-no-border="true"-->
+<!--                     ng-repeat="item in $ctrl.form.sortCode.input track by $index">-->
+<!--                <field-input data-input-name="sort+$index"-->
+<!--                             data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                             data-input-value="$ctrl.form.sortCode.output[$index]"-->
+<!--                             data-indent-size="xl" data-size="xs"-->
+<!--                             data-placeholder="{{item}}"></field-input>-->
+<!--                &lt;!&ndash;                TODO fix it&ndash;&gt;-->
+<!--                <div ng-if="$index != $ctrl.form.sortCode.input.length - 1" class="input-dash" style="color: #FFFFFF">-->
+<!--                    - -->
+<!--                </div>-->
+<!--                <div ng-if="$index != $ctrl.form.sortCode.input.length - 1" class="input-dash">-</div>-->
+<!--            </wrapper>-->
+<!--    </input-block>-->
+<!--    <input-block>-->
+<!--        <wrapper class="display-flex" data-bottom-indent="true" data-column="true" data-left-side-indent="true"-->
+<!--                 data-center="true">-->
+<!--            <input-title data-font-normal-size="true" data-reseted-margin="true"-->
+<!--                         data-title="When did you move in to your billing address?"></input-title>-->
+<!--        </wrapper>-->
+<!--        <wrapper data-right-edge="true" data-bottom-indent="true" data-distribute-evenly="true" data-width-xl="true">-->
+<!--            <field-select data-input-name="employmentStatus"-->
+<!--                          data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                          options="[{name: 'January', value: 'January'},{name: 'February', value: 'February'},-->
+<!--                          {name: 'March', value: 'March'},{name: 'April', value: 'April'},-->
+<!--                          {name: 'May', value: 'May'},{name: 'June', value: 'June'},-->
+<!--                          {name: 'July', value: 'July'},{name: 'August', value: 'August'},-->
+<!--                          {name: 'September', value: 'September'},{name: 'October', value: 'October'},-->
+<!--                          {name: 'November', value: 'November'},{name: 'December', value: 'December'}]"-->
+<!--                          data-text-indent="s"-->
+<!--                          form="$ctrl.form.movementAddress.months"-->
+<!--                          data-selected-options="$ctrl.form.movementAddress.selectedMonth" data-text-indent="s"-->
+<!--                          data-border-thin="true"-->
+<!--                          data-size="l" data-text-color="true"-->
+<!--                          data-option-title="&#45;&#45;Please select&#45;&#45;">-->
+<!--            </field-select>-->
+<!--            <field-input-->
+<!--                    data-on-input="$ctrl.updateStore(value, name)"-->
+<!--                    data-input-name="movementDay"-->
+<!--                    data-indent-size="m" data-size="s" data-input-value="$ctrl.form.movementAddress.day"-->
+<!--                    data-placeholder=""></field-input>-->
+<!--        </wrapper>-->
+<!--    </input-block>-->
+<!--    <button type="submit" ng-click="select()">Submit form</button>-->
 </form>

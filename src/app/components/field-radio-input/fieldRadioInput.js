@@ -10,6 +10,8 @@ export const fieldRadioInputComponent = {
         inputColor: '@',
         inputWidth: '@',
         inputTitle: '@',
-        selectedOptions : '='
+        selectedOption : '=',
+        onInput: '&',
+        inputName: '@'
     }
 };

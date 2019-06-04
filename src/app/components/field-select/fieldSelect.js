@@ -9,7 +9,8 @@ export const fieldSelectComponent = {
         size: '@',
         textColor: '=',
         optionTitle: '@',
-        form: '=',
-        selectedOptions: '=',
+        options: '<',
+        inputName: '@',
+        onInput: '&',
     }
 };

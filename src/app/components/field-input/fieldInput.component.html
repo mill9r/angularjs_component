@@ -6,5 +6,8 @@
         'field_size-{{$ctrl.size}}': true,
         'field_box-sizing': true
         }"
+       ng-attr-name="{{$ctrl.inputName}}"
        type="text"
-       placeholder="{{$ctrl.placeholder}}">
+       placeholder="{{$ctrl.placeholder}}"
+       ng-change="$ctrl.onInput({value:$ctrl.inputValue, name:$ctrl.inputName})">
+

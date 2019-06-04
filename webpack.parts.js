@@ -21,6 +21,11 @@ exports.loadCSS = () => ({
                         sourceMap: true
                     }
                 },// compiles Sass to CSS, using Node Sass by default
+                {
+                    loader: "file-loader",
+                    // include: [path.resolve(__dirname,'src')],
+
+                }
             ],
             include: helpers.root('src', 'app')
         }]

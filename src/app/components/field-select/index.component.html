@@ -1,5 +1,8 @@
 <select
-        ng-model="$ctrl.selectedOptions"
+        ng-options="option.name for option in $ctrl.options"
+        ng-change="$ctrl.onInput({value:$ctrl.item.value, name:$ctrl.inputName})"
+        ng-attr-name="{{$ctrl.inputName}}"
+        ng-model="$ctrl.item"
         ng-class="{
     'field' : true,
     'field_box-sizing': true,
@@ -9,7 +12,6 @@
     'field_text-color': $ctrl.textColor
 }">
     <option value="">{{$ctrl.optionTitle}}</option>
-    <option ng-selected="$ctrl.optionTitle" ng-repeat="option in $ctrl.form" value="{{option}}">{{option}}</option>
 </select>
 
 

@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "type": "Title",
+      "attributes" : {
+        "title": "Title"
+      }
+    },
+    {
+      "type": "name",
+      "attributes": {
+        "title": "Name"
+      },
+      "fields": {
+        "firstName": {
+          "placeholder": "First name"
+        },
+        "surname": {
+          "placeholder": "Surname"
+        }
+      }
+    }
+  ]
+}
